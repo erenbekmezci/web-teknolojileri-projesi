@@ -1,0 +1,121 @@
+nav{
+    background-color: #333;
+    position:-webkit-sticky; /*safari*/
+    position: sticky;
+    top: 0;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;  
+}
+  
+  
+li{
+    float: left;
+    
+}
+
+.right{
+    float: right;
+}
+  
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active){
+    background-color: #111;
+    color: white;
+}
+
+  
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*section*/
+
+section img{
+    width: 500px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.clear{
+    overflow: auto;
+    padding: 5px;
+}
+
+/*footer*/
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:darkcyan;
+    color: white;
+    text-align: center;
+}
+footer p{
+    text-align: center;
+}
+
+section table{
+    background-color: white;
+    border: 1px solid red;
+}
+
+@media screen and (max-width: 600px) {
+    
+    ul li {float: none;}
+    ul li.right{float: none;}
+    nav{
+        background-color: #333;
+        
+        position:static;
+        
+    }
+}
+
+/*login*/
+
+.kapla {	
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.form-login {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  border: 1px solid rgba(0,0,0,0.1);
+  background-color: #fff;  
+}
+.form-login-heading{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+/*login*/
+
+/*iletisim*/
+
+.form-alanı{
+    background-color: blue;
+    padding-left: 15px;
+}
+.tab{
+    width: 60%;
+    margin: 0 auto;
+}
+.tab-header{
+    text-align: center;
+}
