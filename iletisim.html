@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Teknolojileri Projesi</title>
+
+    <!--Css-->
+    <link rel="stylesheet" href="_proje-stil.css">
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="bootstrap-css/bootstrap.min.css">
+
+    <!-- Ikon Kutuphanesi -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+    
+<style>
+       ul{
+        padding-left: 0;
+
+       }
+      
+        
+   
+
+</style>
+
+</head>
+
+
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Eren Bekmezci</h1>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li class="home"><a href="index.html"><i class="fas fa-home">Anasayfa</i></a></li>
+                <li><a class="nav-item" href="#">Şehrim</a></li>
+                <li><a class="nav-item" href="#">Kültürel Mirasımız</a></li>
+                <li><a class="nav-item" href="#">Özgeçmişim</a></li>
+                <li><a class="nav-item" href="#">İlgi Alanlarım</a></li>
+                <li><a class="active" href="iletisim.html">İletişim</a></li>
+                <li class="right"><a class="login" href="login.html">Giriş Yap</a></li>             
+               
+                  
+
+                </ul>
+
+        </div>
+    </nav>
+    <section>
+        
+        <div class="container iletisim-container">
+            <form action="iletisim.php" method="POST" name="Form" onsubmit="return control()">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Ad Soyad</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="name" id="name" placeholder="Ad Soyad">
+                      
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-sm-2 col-form-label">Password</label>
+                  <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
+                  </div>
+                </div>
+
+                <fieldset class="form-group">
+                    <div class="row">
+                      <legend class="col-form-label col-sm-2 pt-0">Cinsiyetiniz</legend>
+                      <div class="col-sm-10">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="Cinsiyet" id="erkek" value="erkek" checked>
+                          <label class="form-check-label" >
+                            Erkek
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="Cinsiyet" id="kadın" value="kadın">
+                          <label class="form-check-label" >
+                            Kadın
+                          </label>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </fieldset>
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Şehriniz</label>
+                    <div class="col-sm-10">
+                        <select class="form-control" name="sehir" id="sehir">
+                            <option  value="06">Ankara</option>
+                            <option  value="16">Bursa</option>
+                            <option  value="20">Denizli</option>
+                            <option  value="22">Edirne</option>
+                            <option  value="54">Sakarya</option>
+                            <option  value="31">Hatay</option>
+                            <option  value="67">Zonguldak</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Üniversite</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="uni" list="universiteler">
+                        <datalist id="universiteler">
+                            <option name="uni" value="sau">
+                                Sakarya Üniveristesi
+                            </option>
+                            <option name="uni" value="subu">
+                                Sakarya Uyg. Bil. Üniversitesi
+                            </option>
+                            <option name="uni" value="kou">
+                                Kocaeli Üniversitesi
+                            </option>
+                            <option name="uni" value="itu">
+                                İstanbul Teknik Üniversitesi
+                            </option>
+                            <option name="uni" value="beu">
+                                Zonguldak Bülent Ecevit Üniveristesi
+                            </option>
+                            
+                        </datalist>
+                    </div>
+                </div>     
+                
+                
+                <div class="form-group row">                   
+                    <label class="col-sm-2 col-form-label">Konu</label>
+                    
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-sm-2 col-form-label">Dosya</label>
+                    
+                    
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" multiple>
+                    
+                </div>
+
+                
+                <div class="form-group row">
+                  <div class="col-sm-2">Kurslar</div>
+                  <div class="col-sm-10">
+                    
+                      <input class="form-check-input" type="checkbox" name="ndp" value="ndp" id="ndp">
+                      <label class="form-check-label">
+                        Nesneye Dayalı Programlama
+                      </label>
+
+                      <input class="form-check-input" type="checkbox" name="web" value="web" id="web">
+                      <label class="form-check-label">
+                        Web teknolojileri
+                      </label>
+
+                      <input class="form-check-input" type="checkbox" name="veri" value="veri" id="veri">
+                      <label class="form-check-label">
+                        Veri Yapıları 
+                      </label>
+                      
+                    
+                  </div>
+                </div class="form-group">
+                
+                        <button type="submit" class="btn btn-primary">Gönder</button>
+                        <button type="reset" class="btn btn-primary">Temizle</button>                 
+                </div>
+
+                
+              </form>
+        </div>
+
+    </section>
+    
+    <footer>
+        <div class="container">
+          <p>Web-Teknolojileri-Projesi © Eren Bekmezci 2021</p>
+        </div>
+    </footer>
+
+
+    <!-- BOOTSTRAP -->
+	<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>-->
+
+	<!-- JAVASCRIPT -->
+    <script>
+		function control()
+		{
+			var x = document.forms["Form"]["name"].value;
+			if (x == "") 
+			{
+				alert("Ad-Soyad boş bırakılamaz");
+				return false;
+			}
+
+			var y = document.forms["Form"]["email"].value;
+			if (y == "") 
+			{
+				alert("Mail Kısmı Boş bırakılamaz");
+				return false;
+			}
+
+			var forMail = /^[a-zA-Z0-9._-]+@([a-zA-Z0-9.-]+.)+([.])+[a-zA-Z0-9.-]{2,4}$/;
+			if (forMail.test(y) == false) 
+			{
+				alert("Geçersiz Mail Adresi!!!");
+				return false;
+			}
+
+      var x = document.forms["Form"]["pass"].value;
+			if (x == "") 
+			{
+				alert("Şifre boş bırakılamaz");
+				return false;
+			}
+
+      var x = document.forms["Form"]["uni"].value;
+			if (x == "") 
+			{
+				alert("Üniversite kısmı boş bırakılamaz");
+				return false;
+			}
+
+		}	
+
+    </script>	
+    
+</body>
+</html>

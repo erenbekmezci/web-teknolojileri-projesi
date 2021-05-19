@@ -1,3 +1,28 @@
+ul{
+    padding-left: 0;
+       
+}
+
+body{
+    font-size: 16px;
+    background: #eee !important;
+}
+
+.login-body{
+        
+    background-color:white;
+
+}
+
+h1{
+    text-align: left;
+    height: 78px;
+}
+
+section{
+    margin-bottom: 50px;
+}
+
 nav{
     background-color: #333;
     position:-webkit-sticky; /*safari*/
@@ -41,7 +66,7 @@ li a:hover:not(.active){
     color: white;
 }
 
-/*section*/
+
 
 section img{
     width: 500px;
@@ -54,7 +79,7 @@ section img{
     padding: 5px;
 }
 
-/*footer*/
+
 
 footer {
     position: fixed;
@@ -118,4 +143,24 @@ section table{
 }
 .tab-header{
     text-align: center;
+}
+.form-group{
+    margin-bottom: 5px;
+}
+
+section .iletisim-container{
+    width: 50%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    background-color: burlywood;
+    padding: 15px;
+}
+
+@media screen and (max-width: 600px){
+
+    section .iletisim-container{
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
