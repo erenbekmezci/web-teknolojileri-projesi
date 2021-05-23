@@ -47,15 +47,15 @@
         </div>
     </header>
     <nav>
-        <div class="container">
+        <div class="container index">
             <ul>
-                <li class="home"><a href="index.html"><i class="fas fa-home">Anasayfa</i></a></li>
-                <li><a class="nav-item" href="#">Şehrim</a></li>
-                <li><a class="nav-item" href="#">Kültürel Mirasımız</a></li>
-                <li><a class="nav-item" href="#">Özgeçmişim</a></li>
-                <li><a class="nav-item" href="#">İlgi Alanlarım</a></li>
-                <li><a href="iletisim.html">İletişim</a></li>
-                <li class="right"><a class="login" href="login.html">Giriş Yap</a></li>             
+            <li><a href="index.html"><i class="fas fa-home">Anasayfa</i></a></li>
+                <li><a  href="sehrim.html">Şehrim</a></li>
+                <li><a  href="mirasimiz.html">Kültürel Mirasımız</a></li>
+                <li><a  href="ozgecmis.html">Özgeçmişim</a></li>
+                <li><a  href="ilgi-alani.html">İlgi Alanlarım</a></li>
+                <li><a class="active" href="iletisim.html">İletişim</a></li>
+                <li class="right"><a class="login" href="login.html"><i class="fas fa-sign-in-alt">Giriş Yap</i></a></li>             
                
                   
 
@@ -63,7 +63,7 @@
 
         </div>
     </nav>
-    <section>
+    <main>
         <div class="container">  
             <h3 class="tab-header">Bilgiler</h3>
             <div class="tab">
@@ -105,26 +105,7 @@
                         </td>
                     </tr>
 
-                    <tr>
-                        <td>Üniversite</td>
-                        <td>
-                            <?php
-                                if($_POST["uni"]=="subu")
-                                    echo "Sakarya Uyg. Bil. Üniversitesi";
-                                else if($_POST["uni"]=="sau")
-                                    echo "Sakarya Üniveristesi";
-                                else if($_POST["uni"]=="beu")
-                                    echo "Zonguldak Bülent Ecevit Üniveristesi";
-                                else if($_POST["uni"]=="kou")
-                                    echo "Kocaeli Üniversitesi";
-                                else if($_POST["uni"]=="itu")
-                                    echo "İstanbul Teknik Üniversitesi";
-
-                                      
-                            
-                            ?>
-                        </td>
-                    </tr>
+                    
                     <tr>
                         <td>Şehir</td>
                         <td>
@@ -149,10 +130,25 @@
                             ?>
                         </td>
                     </tr>
+
+                    <tr>
+                        <td>Mesaj</td>
+
+                        <td>
+                            <?php
+                               echo htmlspecialchars($_POST["mesaj"]);
+
+                            
+                            ?>
+                        </td>
+
+                        
+
+                    </tr>
                 </table>
             </div>            
         </div>
-    </section>
+    </main>
     
     <footer>
         <div class="container">

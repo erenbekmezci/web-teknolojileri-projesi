@@ -16,8 +16,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
 		integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 
-
-
     <style>
         ul{
             padding-left: 0px;
@@ -38,13 +36,13 @@
             <ul>
 
 
-                <li><a class="active" href="index.html"><i class="fas fa-home">Anasayfa</i></a></li>
+                <li><a  href="index.html"><i class="fas fa-home">Anasayfa</i></a></li>
                 <li><a  href="sehrim.html">Şehrim</a></li>
                 <li><a  href="mirasimiz.html">Kültürel Mirasımız</a></li>
                 <li><a  href="ozgecmis.html">Özgeçmişim</a></li>
-                <li><a  href="ilgi-alani.html">İlgi Alanlarım</a></li>
+                <li><a class="active" href="ilgi-alani.html">İlgi Alanlarım</a></li>
                 <li><a  href="iletisim.html">İletişim</a></li>
-                <li class="right"><a class="login" href="login.html"><i class="fas fa-sign-in-alt">Giriş Yap</i></a></li>             
+                <li class="right"><a class="login" href="login.html"><i class="fas fa-sign-in-alt">Giriş Yap</i></a></li>            
                
                   
 
@@ -53,30 +51,22 @@
         </div>
     </nav>
     <main>
-        
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
                     <div class="card mb-4">
-                        <img src="img/ben.jpeg" class="center"  alt="">
                         <div class="card-body">    
-                            <h4 class="card-title">Ben kimim</h4>
-                            <p class="card-text">
-                                Merhaba ismim Eren Bekmezci 9 Mart 2001 tarihinde Zonguldak'ta doğdum. Sakarya Üniversitesi Bilgisayar mühendisliği 1. sınıf öğrencisiyim
-                                Küçüklüğümden beri bilgisayara ve internete meraklıyım 
-                                web sitelerine karşı ayrı bir ilgim vardı çünkü merak ettiğimiz şeyleri google ettikten sonra karşımıza bir sürü web sayfaları çıkıyor 
-                                bu web sayfalarının nasıl yapıldığı , tasarlandığı ve içeriklerinin adminler tarafından nasıl oluşturulduğu bana göre merak verici bir şeydi
-                                çünkü insanlar web sitene bilgi almaya geliyor ve verdiğin bilginin doğru olması lazım , araştırılması lazım.
-                                Yanlış bir bilgi verdiğinde vebali kaynak olarak gösterilen siteye kalıcak.
-
-                            </p>
-                            <p class="card-text">
-                                Web sitelerine olan bu ilgimden dolayı da ileriki karıyerime bu yönde devam etmek istiyorum bu web sitesi  de bunun ilk adımı.
-                            </p>
-
+                            
+                            <div class="quote-box">
+                                <p id="quote">İngilizce alıntı sözler...</p>
+                                <small id="author">- Yazar</small>
+                              </div>
+                              <button id="btn">Yeni söz için tıklayın</button>
+                            
+                            
                             
                         </div>
-                        <div class="card-footer">Posted on 22.05.2021</div>
+                        
                     </div>
 
                     
@@ -97,8 +87,6 @@
                                 <li><a href="eregli-kalesi.html">Ereğli Kalesi</a></li>
                             </ul>
 								
-							
-
 						</div>
                 </div>
 
@@ -108,6 +96,27 @@
 
             
         </div>
+        </div>
+
+        <script>
+            const api = "https://api.quotable.io/random";
+
+            const quote = document.getElementById("quote");
+            const author = document.getElementById("author");
+            const btn = document.getElementById("btn");
+
+            btn.addEventListener("click", getQuote);
+
+            function getQuote() {
+            fetch(api)
+                .then((res) => res.json())
+                .then((data) => {
+                quote.innerHTML = `"${data.content}"`;
+                author.innerHTML = `- ${data.author}`;
+                });
+            }
+
+        </script>
     </main>
     
     <footer>

@@ -1,36 +1,31 @@
-ul{
-    padding-left: 0;
-       
+*{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
+
 
 body{
     font-size: 16px;
     background: #eee !important;
 }
 
-.login-body{
-        
-    background-color:white;
-
-}
 
 h1{
     text-align: left;
     height: 78px;
 }
 
-section{
+main{
     margin-bottom: 50px;
 }
 
+/*navbar*/
 nav{
     background-color: #333;
-    position:-webkit-sticky; /*safari*/
-    position: sticky;
-    top: 0;
+    margin-bottom: 25px;
 }
 
-ul{
+.index ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -38,16 +33,16 @@ ul{
 }
   
   
-li{
+.index li{
     float: left;
     
 }
 
-.right{
+.index .right{
     float: right;
 }
   
-li a{
+.index li a{
     display: block;
     color: white;
     text-align: center;
@@ -55,10 +50,12 @@ li a{
     text-decoration: none;
 }
 
-li a:hover:not(.active){
+
+.index li a:hover:not(.active){
     background-color: #111;
     color: white;
 }
+
 
   
 .active {
@@ -66,9 +63,17 @@ li a:hover:not(.active){
     color: white;
 }
 
+/*navbar*/
 
 
-section img{
+
+
+.card-body a{
+    text-decoration: none;
+}
+
+
+main img{
     width: 500px;
     float: left;
     margin-right: 10px;
@@ -94,7 +99,7 @@ footer p{
     text-align: center;
 }
 
-section table{
+main table{
     background-color: white;
     border: 1px solid red;
 }
@@ -125,6 +130,8 @@ section table{
   border: 1px solid rgba(0,0,0,0.1);
   background-color: #fff;  
 }
+
+
 .form-login-heading{
     padding-top: 15px;
     padding-bottom: 15px;
@@ -148,7 +155,7 @@ section table{
     margin-bottom: 5px;
 }
 
-section .iletisim-container{
+main .iletisim-container{
     width: 50%;
     margin-top: 25px;
     margin-bottom: 25px;
@@ -158,9 +165,51 @@ section .iletisim-container{
 
 @media screen and (max-width: 600px){
 
-    section .iletisim-container{
+    main .iletisim-container{
         width: 100%;
         margin-left: 10px;
         margin-right: 10px;
     }
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+    
+}
+
+/*ilgi alanlarım*/
+
+.quote-box {
+    border: 2px solid #ddd;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+  }
+  #quote {
+    color: #444;
+    text-align: center;
+  }
+  #author {
+    float: right;
+    color: #888;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
+  }
+  
+  #btn {
+    align-self: center;
+    border: 2px solid #666;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    color: #666;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  #btn:focus {
+    outline: none;
+  }

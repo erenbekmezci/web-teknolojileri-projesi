@@ -31,22 +31,22 @@
 
 
 </head>
-<body class="login-body">
+<body>
     <header>
         <div class="container">
             <h1>Eren Bekmezci</h1>
         </div>
     </header>
     <nav>
-        <div class="container">
+        <div class="container index">
             <ul>
-                <li class="home"><a href="index.html"><i class="fas fa-home">Anasayfa</i></a></li>
-                <li><a href="#">Şehrim</a></li>
-                <li><a class="nav-item" href="#">Kültürel Mirasımız</a></li>
-                <li><a class="nav-item" href="#">Özgeçmişim</a></li>
-                <li><a class="nav-item" href="#">İlgi Alanlarım</a></li>
-                <li><a class="nav-item" href="iletisim.html">İletişim</a></li>
-                <li class="right"><a class="login active" href="login.html">Giriş Yap</a></li>             
+                <li><a  href="index.html"><i class="fas fa-home">Anasayfa</i></a></li>
+                <li><a  href="sehrim.html">Şehrim</a></li>
+                <li><a  href="mirasimiz.html">Kültürel Mirasımız</a></li>
+                <li><a  href="ozgecmis.html">Özgeçmişim</a></li>
+                <li><a  href="ilgi-alani.html">İlgi Alanlarım</a></li>
+                <li><a  href="iletisim.html">İletişim</a></li>
+                <li class="right"><a class="active login" href="login.html"><i class="fas fa-sign-in-alt">Giriş Yap</i></a></li>             
                
                   
 
@@ -54,31 +54,36 @@
 
         </div>
     </nav>
-    <section>
-        
-    <?php
+    <main>
+        <div class="container">
+            <?php
 
-    if(isset($_POST['submit']))
-    {
-        $user = $_POST['adi'];
-        $sifre = $_POST['sifre'];
-        if($user=="eren" && $sifre=="admin")
-            echo "Başarılı hoşgeldiniz $user ";
+                if(isset($_POST['submit']))
+                {
+                    $user = $_POST['adi'];
+                    $sifre = $_POST['sifre'];
+                    if($user=="eren@sakarya.edu.tr" && $sifre=="eren")
+                        echo "Başarılı hoşgeldiniz $user ";
 
-        else
-        {
-            echo "Başarısız";
-            echo "<p> <a href='login.html'>&lt;GERİ DÖN&gt;</a></p> ";
-        }
+                    else
+                    {
+                        echo "Kullancı Adı veya Şifre Yanlış.<br>";
+			            echo "Lütfen tekrar giriş yapın !";
+			            header("Refresh: 1; url=login.html");
+                    }
 
-    }
+                }
 
     
-?>  
+            ?>
 
+
+
+        </div>   
+                
             
         
-    </section>
+    </main>
     <footer>
         <div class="container">
             <p>Web-Teknolojileri-Projesi © Eren Bekmezci 2021</p>
@@ -87,5 +92,14 @@
     
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 
 
